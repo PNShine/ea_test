@@ -1,28 +1,33 @@
-#main{
-  width: 60vw;
-  height: 60vh;
-  position: absolute;
-  left: calc(50% - 30vw);
-  top: calc(50% - 30vh);
-  border-radius: 5px;
-  padding-left: 10px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  background-color: #eeeeee;
-  line-height: 15px;
 
-  -webkit-box-shadow: 0px 0px 30px 1px rgba(112,112,112,0.38);
-  -moz-box-shadow: 0px 0px 30px 1px rgba(112,112,112,0.38);
-  box-shadow: 0px 0px 30px 1px rgba(112,112,112,0.38);
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #efefef;
 }
 
+#root{
+  width: 100vw;
+  height: 100vh;
+}
+
+#main{
+  width: 100vw;
+  position: absolute;
+  top: 150px;
+  padding-bottom: 40px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
 
 #loader{
-  height: 48px;
-  width: 48px;
+  height: 64px;
+  width: 64px;
   position: absolute;
-  left: calc(50% - 24px);
-  top: calc(50% - 24px);
+  left: calc(50% - 32px);
+  top: calc(50% - 32px);
   animation: load 1000ms infinite;
   -moz-animation: load 1000ms infinite;
   -webkit-animation: load 1000ms infinite;
@@ -30,19 +35,36 @@
 }
 
 #loaderImg{
-  fill: #ff884d;
-  height: 48px;
-  width: 48px;
+  fill: #ff6600;
+  height: 64px;
+  width: 64px;
+}
+
+#title{
+  position: absolute;
+  top: 65px;
+  width: 100vw;
+  color:#404040;
+  text-align: center;
+  font-size: 30px;
+  font-family: monospace;
+}
+
+.make{
+  background-color: white;
+  padding: 15px;
+  width: 500px;
+  height: 100px;
+  margin: 15px;
+  border-radius: 5px;
+
 }
 
 .error{
-  background-color: #ff5050;
+  background-color: #ff6666;
   color: white;
   width: 100vw;
-  height: 0vh;
-  position: absolute;
-  left: 0px;
-  top: 0px;
+  height: 0px;
   line-height: 40px;
   text-align: center;
   overflow-y: auto;
@@ -53,14 +75,33 @@
   -webkit-animation: error 300ms 1;
   -o-animation: error 300ms 1;
 
+  transition: transform 300ms ease-out;
+  -moz-transition: transform 300ms ease-out;
+  -webkit-transition: transform 300ms ease-out;
+  -o-transition: transform 300ms ease-out;
+
   animation-fill-mode: forwards;
   -moz-animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
+}
 
+.drop-shadow{
   -webkit-box-shadow: 0px 0px 30px 1px rgba(112,112,112,0.38);
   -moz-box-shadow: 0px 0px 30px 1px rgba(112,112,112,0.38);
   box-shadow: 0px 0px 30px 1px rgba(112,112,112,0.38);
+}
+
+.hide{
+  transform: translateY(-50px);
+}
+
+.close-button{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 20px;
+
 }
 
 @-webkit-keyframes load {
@@ -95,4 +136,21 @@
 @keyframes error {
   from {height : 0px;}
   to {height: 40px;}
+}
+
+@-webkit-keyframes expanding {
+  from {height : 0px;}
+  to {height: 80px;}
+}
+@-moz-keyframes expanding {
+  from {height : 0px;}
+  to {height: 80px;}
+}
+@-o-keyframes expanding {
+  from {height : 0px;}
+  to {height: 80px;}
+}
+@keyframes expanding {
+  from {height : 0px;}
+  to {height: 80px;}
 }
