@@ -1,0 +1,98 @@
+#main{
+  width: 60vw;
+  height: 60vh;
+  position: absolute;
+  left: calc(50% - 30vw);
+  top: calc(50% - 30vh);
+  border-radius: 5px;
+  padding-left: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #eeeeee;
+  line-height: 15px;
+
+  -webkit-box-shadow: 0px 0px 30px 1px rgba(112,112,112,0.38);
+  -moz-box-shadow: 0px 0px 30px 1px rgba(112,112,112,0.38);
+  box-shadow: 0px 0px 30px 1px rgba(112,112,112,0.38);
+}
+
+
+#loader{
+  height: 48px;
+  width: 48px;
+  position: absolute;
+  left: calc(50% - 24px);
+  top: calc(50% - 24px);
+  animation: load 1000ms infinite;
+  -moz-animation: load 1000ms infinite;
+  -webkit-animation: load 1000ms infinite;
+  -o-animation: load 1000ms infinite;
+}
+
+#loaderImg{
+  fill: #ff884d;
+  height: 48px;
+  width: 48px;
+}
+
+.error{
+  background-color: #ff5050;
+  color: white;
+  width: 100vw;
+  height: 0vh;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  line-height: 40px;
+  text-align: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  animation: error 300ms 1;
+  -moz-animation: error 300ms 1;
+  -webkit-animation: error 300ms 1;
+  -o-animation: error 300ms 1;
+
+  animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+
+  -webkit-box-shadow: 0px 0px 30px 1px rgba(112,112,112,0.38);
+  -moz-box-shadow: 0px 0px 30px 1px rgba(112,112,112,0.38);
+  box-shadow: 0px 0px 30px 1px rgba(112,112,112,0.38);
+}
+
+@-webkit-keyframes load {
+  from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes load {
+  from {-moz-transform: rotate(0deg);}
+  to {-moz-transform: rotate(360deg);}
+}
+@-o-keyframes load {
+  from {-o-transform: rotate(0deg);}
+  to {-o-transform: rotate(360deg);}
+}
+@keyframes load {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+@-webkit-keyframes error {
+  from {height : 0px;}
+  to {height: 40px;}
+}
+@-moz-keyframes error {
+  from {height : 0px;}
+  to {height: 40px;}
+}
+@-o-keyframes error {
+  from {height : 0px;}
+  to {height: 40px;}
+}
+@keyframes error {
+  from {height : 0px;}
+  to {height: 40px;}
+}
